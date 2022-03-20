@@ -31,7 +31,7 @@ def FilterValidPhoneNums(nums):
 
 
 def EmailExtract(txt):
-    ValidatedAtDotEmailRegex = r"[a-z0-9\.\-+_]+(?:@|\[at\])[a-z0-9\.\-+_]+(?:\.|\[dot\])[a-z]+"
+    ValidatedAtDotEmailRegex = r"([a-z0-9\.\-+_]+(?:@|\[at\])[a-z0-9\.\-+_]+(?:(?:\.|\[dot\])[a-z]+)+)"
     emailMatch = re.findall(ValidatedAtDotEmailRegex, txt)
     return emailMatch
 
